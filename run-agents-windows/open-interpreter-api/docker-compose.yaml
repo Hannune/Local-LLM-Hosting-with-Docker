@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  open-interpreter-api-ollama:
+    build: .
+    container_name: open-interpreter-api
+    ports:
+      - "8002:8000"
+    volumes:
+      - .:/app
+    restart: unless-stopped
